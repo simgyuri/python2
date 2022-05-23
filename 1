@@ -1,0 +1,40 @@
+def plus(a,b):
+    return a+b
+
+def sub(a,b):
+    return a-b
+
+def div(a,b):
+    if(b!=0):
+        return a/b
+
+def mul(a,b):
+    return a*b
+
+def run():
+   while(True):
+       print("연산을 진행할 두 숫자를 입력하세요. : ")
+       num, num2 = map(int, input("연산을 진행할 두 숫자를 입력하시오. : ").split())
+       i=input("어떠한 연산을 수행할까요? ")
+       if(i=="+"):
+           a,b=map(int, input("두 정수 입력:").split())
+           print("%d+%d=%d" %(a,b,add(a,b)))
+        
+       elif(i=="-"):
+           a,b=map(int, input("두 정수 입력:").split())
+           print("%d-%d=%d" %(a,b,sub(a,b)))
+
+       elif(i=="/"):
+           a,b=map(int, input("두 정수 입력:").split())
+           print("%d/%d=%d" %(a,b,div(a,b)))
+
+       elif(i=="*"):
+           a,b=map(int, input("두 정수 입력:").split())
+           print("%d*%d=%d" %(a,b,mul(a,b)))
+
+       elif(i=="q"):
+           print("종료")
+           break
+
+       else:
+         print("해당 연산은 지원하지 않습니다. ")
