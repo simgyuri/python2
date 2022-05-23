@@ -1,0 +1,29 @@
+import time
+import random
+
+print("로또번호 추출을 시작합니까?")
+
+
+def lotto():
+    number = set()
+    while len(number)<6:
+        number.add(random.radint(1, 45))
+    number = list(number)
+    number.sort()
+    print(number)
+
+def run():
+    times = int(input("시행 횟수: "))
+    for i in range(times):
+        lotto()
+
+print("1")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("3")
+time.sleep(1)
+print("4")
+time.sleep(1)
+print("5")
+time.sleep(1)
